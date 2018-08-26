@@ -12,9 +12,11 @@ function checkPopup() {
     if (domainMessage === 'tp-modal' && document.activeElement === document.body) {
         var tpModal = document.getElementsByClassName('tp-modal')[0];
         if (tpModal) {
-            document.getElementsByClassName('tp-modal')[0].classList.remove('tp-modal');
-            document.getElementsByClassName('tp-backdrop tp-active')[0].classList.remove('tp-active');
+            var tpActive = document.getElementsByClassName('tp-backdrop tp-active')[0];
+            tpModal.parentNode.removeChild(tpModal);
+            tpActive.parentNode.removeChild(tpActive);
             document.body.classList.remove('tp-modal-open');
+            window.scrollTo(0,0);
         }
     } else if (domainMessage === 'clearCookies') {
         var sendDomain = {

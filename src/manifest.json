@@ -2,8 +2,9 @@
   "author": "Craig Walker",
   "manifest_version": 2,
   "name": "Let Me Read That Article",
+  "short_name": "LMRTA",
   "description": "Let Me Read That Article bypasses the popup telling you to subscribe to read the article when you have an adblocker.",
-  "version": "1.0",
+  "version": "1.1",
   "background": {
     "scripts": ["background.js"]
   },
