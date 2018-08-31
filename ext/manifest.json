@@ -3,7 +3,7 @@
   "manifest_version": 2,
   "name": "Let Me Read That Article",
   "short_name": "LMRTA",
-  "description": "Scroll on",
+  "description": "Read that article you've always wanted",
   "version": "1.2",
   "background": {
     "scripts": ["background.js"]
