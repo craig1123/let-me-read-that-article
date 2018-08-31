@@ -3,10 +3,15 @@
   "manifest_version": 2,
   "name": "Let Me Read That Article",
   "short_name": "LMRTA",
-  "description": "Let Me Read That Article bypasses the popup telling you to subscribe to read the article when you have an adblocker.",
-  "version": "1.1",
+  "description": "Scroll on",
+  "version": "1.2",
   "background": {
     "scripts": ["background.js"]
+  },
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
   },
   "content_scripts": [{
       "matches": ["<all_urls>"],

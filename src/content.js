@@ -4,14 +4,24 @@ var domains = {
     "www.nytimes.com": 'clearCookies',
 };
 var domainMessage = domains[document.location.host];
+
 if (domainMessage) {
-    setTimeout(checkPopup, 3000);
+    var timesRun = 0;
+    var interval = setInterval(function(){
+        timesRun += 1;
+        if (timesRun === 10) {
+            clearInterval(interval);
+        } else {
+            checkPopup();
+        }
+    }, 2000);
 }
 
 function checkPopup() {
     if (domainMessage === 'tp-modal' && document.activeElement === document.body) {
         var tpModal = document.getElementsByClassName('tp-modal')[0];
         if (tpModal) {
+            clearInterval(interval);
             var tpActive = document.getElementsByClassName('tp-backdrop tp-active')[0];
             tpModal.parentNode.removeChild(tpModal);
             tpActive.parentNode.removeChild(tpActive);
@@ -19,6 +29,7 @@ function checkPopup() {
             window.scrollTo(0,0);
         }
     } else if (domainMessage === 'clearCookies') {
+        clearInterval(interval);
         var sendDomain = {
             "www.nytimes.com": ".nytimes.com",
         };
