@@ -1,25 +1,29 @@
 {
-  "author": "Craig Walker",
-  "manifest_version": 2,
-  "name": "Let Me Read That Article",
-  "short_name": "LMRTA",
-  "description": "Read that article you've always wanted",
-  "version": "1.2",
-  "background": {
-    "scripts": ["background.js"]
-  },
-  "icons": {
-    "16": "16.png",
-    "48": "48.png",
-    "128": "128.png"
-  },
-  "content_scripts": [{
-      "matches": ["<all_urls>"],
-      "js":      ["content.js"]
-  }],
-  "permissions": [
-    "<all_urls>",
-    "activeTab",
-    "cookies"
-  ]
+    "author": "Craig Walker",
+    "manifest_version": 2,
+    "name": "Let Me Read That Article",
+    "short_name": "LMRTA",
+    "description": "Read that article you've always wanted",
+    "version": "1.2",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "icons": {
+        "16": "16.png",
+        "48": "48.png",
+        "128": "128.png"
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://www.businessinsider.com/*",
+            "https://www.sltrib.com/*",
+            "https://www.nytimes.com/*"
+        ],
+        "js": ["content.js"]
+    }],
+    "permissions": [
+        "<all_urls>",
+        "activeTab",
+        "cookies"
+    ]
 }
