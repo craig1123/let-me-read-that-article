@@ -1,64 +1,75 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	    <title>Open in Figma ✨ Open Figma links in the desktop app</title>
-	    <meta name="Description" content="Free Chrome extensions that redirects Figma shared links to launch the desktop app instead.">
-	    <meta name="keywords" content="adblocker, can't read article, business insider, New York Times" />
+    <head>
+        <title>Let Me Read That Article</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+        <meta name="description" content="Read that article you've always wanted"/>
 
-	    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300,300italic' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="./public/images/favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="./public/css/index.css">
+        <noscript>
+            <style>
+                body {
+                    overflow: auto !important;
+                }
 
-	    <link rel="icon" type="image/x-icon" href="favicon.ico">
-		<link rel="shortcut icon" href="./../public/images/favicon.ico" type="image/x-icon"/>
-		<link rel="stylesheet" href="./public/css/index.css" />
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23035506-2"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+                body:after {
+                    display: none !important;
+                }
 
-		gtag('config', 'UA-23035506-2');
-		</script>
-	</head>
+                #main > .inner {
+                    opacity: 1.0 !important;
+                }
 
-	<body>
-		<img src="img/poster.jpg" id="poster" alt="">
+                #main {
+                    opacity: 1.0 !important;
+                    -moz-transform: none !important;
+                    -webkit-transform: none !important;
+                    -ms-transform: none !important;
+                    transform: none !important;
+                    -moz-transition: none !important;
+                    -webkit-transition: none !important;
+                    -ms-transition: none !important;
+                    transition: none !important;
+                    -moz-filter: none !important;
+                    -webkit-filter: none !important;
+                    -ms-filter: none !important;
+                    filter: none !important;
+                }
+            </style>
+        </noscript>
+    </head>
+    <body class="is-loading">
+        <div id="wrapper">
+            <main id="main">
+                <div class="inner">
+                    <!-- <div id="image01" class="image full">
+                        <span class="deferred">
+                            <img src="./public/images/128.png" alt="logo" />
+                        </span>
+                    </div> -->
+                    <img src="./public/images/128.png" alt="logo" />
 
-		<video autoplay loop muted playsinline>
-			<source id="mp4" src="video/video_small.mp4" type="video/mp4">
-		</video>
-
-		<main>
-			<div class="group">
-				<img src="img/logo.png" alt="" id="logo">
-
-				<h1>Open in Figma</h1>
-
-				<h2>
-					Don't you hate it that when a teammate sends you a Figma link, it doesn't just launch the Figma desktop client?
-					😭 I do, so I've made a little Chrome extension that intercepts those links and open the files in Figma's desktop
-					app 🔥
-				</h2>
-
-				<div class="bottom">
-					<a href="https://chrome.google.com/webstore/detail/open-in-figma/ebalaiojkmmkimgpakabcblclljnoloh" target="_blank" id="cta">
-						<svg version="1.1" viewBox="0 0 48 48">
-							<g transform="matrix(1,0,0,1,-400,-1043)">
-								<g transform="matrix(1,0,0,1,400,1043)">
-									<path fill="#FFF" fill-rule="evenodd" stroke="none" d="M5.7954,8.3613c11.1569,-12.9848 31.8437,-10.4217 39.5774,4.7459c-5.44393,0.0019816 -13.9687,-0.001632 -18.5858,0c-3.34871,0.0011657 -5.51081,-0.0749544 -7.85221,1.15765c-2.75267,1.44896 -4.8296,4.13485 -5.55461,7.28957l-7.58471,-13.1931v0Z"></path>
-									<path fill="#FFF" fill-rule="evenodd" stroke="none" d="M16.0155,23.9991c0,4.40074 3.57822,7.98095 7.97652,7.98095c4.39818,0 7.9764,-3.58021 7.9764,-7.98095c0,-4.40062 -3.57822,-7.98095 -7.9764,-7.98095c-4.3983,0 -7.97652,3.58032 -7.97652,7.98095v0Z"></path>
-									<path fill="#FFF" fill-rule="evenodd" stroke="none" d="M27.0876,34.4456c-4.47706,1.33053 -9.71629,-0.145013 -12.5862,-5.09876c-2.19064,-3.78129 -7.97862,-13.8646 -10.6094,-18.4495c-9.21392,14.1221 -1.27282,33.3668 15.4544,36.6515l7.74118,-13.1033v0Z"></path>
-									<path fill="#FFF" fill-rule="evenodd" stroke="none" d="M31.4015,16.0182c3.72886,3.46818 4.54125,9.08405 2.01542,13.4385c-1.90299,3.28074 -7.97664,13.5318 -10.9203,18.4957c17.2342,1.06242 29.7978,-15.8285 24.123,-31.9342h-15.2181v0Z"></path>
-								</g>
-							</g>
-						</svg>
-						<span>Add to Google Chrome</span>
-					</a>
-				</div>
-			</div>
-		</main>
-	</body>
+                    <h1 id="text01">Let Me Read That Article</h1>
+                    <p class="text02">
+                        Do you hate it when you want to read an article ad free, but the website says, "looks like you're using an ad-blocker"? Or when you have a limited number of reads on a news website until you have to subscribe?
+                    </p>
+                    <p class="text02">
+                        Same here, so here's an extension that will intercept those annoying popups and let you read that article.
+                    </p>
+                    <hr id="divider01">
+                    <ul id="icons01" class="icons">
+                        <li>
+                            <a class="n04" href="https://chrome.google.com/webstore/detail/bmdnpacffafhifoibkeajbacaapgcoih/publish-accepted?authuser=0&hl=en" target="_blank">
+                                <span>Add to Google Chrome</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+        <script src="./public/js/index.js" charset="utf-8"></script>
+    </body>
 </html>
