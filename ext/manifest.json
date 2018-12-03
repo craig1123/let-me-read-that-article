@@ -4,7 +4,7 @@
     "name": "Let Me Read That Article",
     "short_name": "LMRTA",
     "description": "Read that article you've always wanted",
-    "version": "1.3",
+    "version": "1.4",
     "background": {
         "scripts": ["background.js"]
     },
@@ -17,7 +17,8 @@
         "matches": [
             "https://www.businessinsider.com/*",
             "https://www.sltrib.com/*",
-            "https://www.nytimes.com/*"
+            "https://www.nytimes.com/*",
+            "https://www.cnbc.com/*"
         ],
         "js": ["content.js"]
     }],

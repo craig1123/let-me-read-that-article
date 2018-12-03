@@ -2,6 +2,7 @@ var domains = {
     "www.businessinsider.com": 'tp-modal',
     "www.sltrib.com": 'tp-modal',
     "www.nytimes.com": 'clearCookies',
+    "www.cnbc.com": 'pico',
 };
 
 var domainMessage = domains[document.location.host];
@@ -23,6 +24,8 @@ function checkPopup() {
         tpModal();
     } else if (domainMessage === 'clearCookies') {
         clearCookies();
+    } else if (domainMessage === 'pico') {
+        pico();
     }
 }
 
@@ -36,6 +39,17 @@ function tpModal() {
         document.body.classList.remove('tp-modal-open');
         window.scrollTo(0,0);
     }
+}
+
+function pico() {
+  var picoContent = document.getElementsByClassName('pico-content')[0];
+  if (picoContent) {
+      clearInterval(interval);
+      var picoOverlay = document.getElementsByClassName('pico-overlay')[0];
+      picoOverlay.parentNode.removeChild(picoOverlay);
+      picoContent.parentNode.removeChild(picoContent);
+      window.scrollTo(0,0);
+  }
 }
 
 function clearCookies() {
