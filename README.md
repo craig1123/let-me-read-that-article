@@ -4,8 +4,26 @@
 
 Prevents those initial popups that won't let you read the article.
 
-[Open in Chrome Web Store](https://chrome.google.com/webstore/detail/bmdnpacffafhifoibkeajbacaapgcoih/publish-accepted?authuser=0&hl=en)
+[Open in Chrome Web Store](https://chrome.google.com/webstore/detail/let-me-read-that-article/bmdnpacffafhifoibkeajbacaapgcoih)
 
 
-## To-Do
-* bostonglobe
+<p align="center">
+  <a href="https://chrome.google.com/webstore/detail/let-me-read-that-article/bmdnpacffafhifoibkeajbacaapgcoih">
+    <img src="https://badgen.net/chrome-web-store/v/bmdnpacffafhifoibkeajbacaapgcoih" />
+  </a>
+  <a href="https://chrome.google.com/webstore/detail/let-me-read-that-article/bmdnpacffafhifoibkeajbacaapgcoih">
+    <img src="https://badgen.net/chrome-web-store/users/bmdnpacffafhifoibkeajbacaapgcoih" />
+  </a>
+  <a href="https://chrome.google.com/webstore/detail/let-me-read-that-article/bmdnpacffafhifoibkeajbacaapgcoih">
+    <img src="https://badgen.net/chrome-web-store/price/bmdnpacffafhifoibkeajbacaapgcoih" />
+  </a>
+  <a href="https://chrome.google.com/webstore/detail/let-me-read-that-article/bmdnpacffafhifoibkeajbacaapgcoih">
+    <img src="https://badgen.net/chrome-web-store/rating/bmdnpacffafhifoibkeajbacaapgcoih" />
+  </a>
+  <a href="https://chrome.google.com/webstore/detail/let-me-read-that-article/bmdnpacffafhifoibkeajbacaapgcoih">
+    <img src="https://badgen.net/chrome-web-store/stars/bmdnpacffafhifoibkeajbacaapgcoih" />
+  </a>
+  <a href="https://chrome.google.com/webstore/detail/let-me-read-that-article/bmdnpacffafhifoibkeajbacaapgcoih">
+    <img src="https://badgen.net/chrome-web-store/rating-count/bmdnpacffafhifoibkeajbacaapgcoih" />
+  </a>
+</p>
