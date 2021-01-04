@@ -2,6 +2,8 @@ var domains = {
   "www.businessinsider.com": "tp-modal",
   "www.sltrib.com": "tp-modal",
   "www.nytimes.com": "clearCookies",
+  "medium.com": "clearCookies",
+  "www.medium.com": "clearCookies",
   "www.cnbc.com": "pico",
 };
 
@@ -61,6 +63,8 @@ function clearCookies() {
   clearInterval(interval);
   var sendDomain = {
     "www.nytimes.com": ".nytimes.com",
+    "www.medium.com": ".medium.com",
+    "medium.com": ".medium.com",
   };
   chrome.runtime.sendMessage({
     type: domainMessage,
