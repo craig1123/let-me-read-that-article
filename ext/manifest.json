@@ -22,16 +22,11 @@
         "https://www.medium.com/*",
         "https://medium.com/*",
         "https://www.cnbc.com/*",
-        "https://www.washingtonpost.com/*"
+        "https://www.bloomberg.com/*",
+        "https://www.telegraph.co.uk/*"
       ],
       "js": ["content.js"]
     }
   ],
-  "permissions": [
-    "<all_urls>",
-    "activeTab",
-    "cookies",
-    "webRequest",
-    "webRequestBlocking"
-  ]
+  "permissions": ["<all_urls>", "activeTab", "cookies"]
 }

@@ -10,16 +10,3 @@ chrome.runtime.onMessage.addListener(function (request) {
     });
   }
 });
-
-chrome.webRequest.onBeforeRequest.addListener(
-  function (details) {
-    return { cancel: true };
-  },
-  {
-    urls: [
-      "*://www.washingtonpost.com/subscribe/paywall/*",
-      "*://www.washingtonpost.com/pwapiv2/article/*",
-    ],
-  },
-  ["blocking"]
-);

@@ -5,6 +5,7 @@ var domains = {
   "medium.com": "clearCookies",
   "www.medium.com": "clearCookies",
   "www.cnbc.com": "pico",
+  "www.bloomberg.com": "clearLocalStorage",
 };
 
 var domainMessage = domains[document.location.host];
@@ -31,8 +32,8 @@ function checkPopup() {
     clearCookies();
   } else if (domainMessage === "pico") {
     pico();
-  } else if (domainMessage === "paywall") {
-    paywall();
+  } else if (domainMessage === "clearLocalStorage") {
+    clearLocalStorage();
   }
 }
 
@@ -70,4 +71,11 @@ function clearCookies() {
     type: domainMessage,
     domain: sendDomain[document.location.host],
   });
+}
+
+function clearLocalStorage() {
+  clearInterval(interval);
+  if (localStorage) {
+    localStorage.clear();
+  }
 }
