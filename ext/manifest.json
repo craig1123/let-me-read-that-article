@@ -28,5 +28,5 @@
       "js": ["content.js"]
     }
   ],
-  "permissions": ["<all_urls>", "activeTab", "cookies"]
+  "permissions": ["<all_urls>", "cookies"]
 }
