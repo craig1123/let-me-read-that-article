@@ -4,7 +4,7 @@
   "name": "Let Me Read That Article",
   "short_name": "LMRTA",
   "description": "Read that article you've always wanted",
-  "version": "1.5",
+  "version": "1.6",
   "background": {
     "scripts": ["background.js"]
   },
@@ -24,7 +24,8 @@
         "https://www.cnbc.com/*",
         "https://www.bloomberg.com/*",
         "https://www.telegraph.co.uk/*",
-        "https://www.sfchronicle.com/*"
+        "https://www.sfchronicle.com/*",
+        "https://heraldcourier.com/*"
       ],
       "js": ["content.js"]
     }

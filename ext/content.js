@@ -7,6 +7,7 @@ var domains = {
   "www.cnbc.com": "pico",
   "www.bloomberg.com": "clearLocalStorage",
   "www.sfchronicle.com": "fancyOverlay",
+  "heraldcourier.com": "fc-abc",
 };
 
 var domainMessage = domains[document.location.host];
@@ -31,6 +32,8 @@ function checkPopup() {
     tpModal();
   } else if (domainMessage === "fancyOverlay") {
     fancyOverlay();
+  } else if (domainMessage === "fc-abc") {
+    fcABC();
   } else if (domainMessage === "clearCookies") {
     clearCookies();
   } else if (domainMessage === "pico") {
@@ -52,16 +55,37 @@ function tpModal() {
   }
 }
 
-function fancyOverlay() {
-  var fancy = document.getElementsByClassName("fancybox-overlay ")[0];
+function fancyOverlay(time) {
+  var times = time || 0;
+  var fancy = document.getElementsByClassName("fancybox-overlay")[0];
   if (fancy) {
     clearInterval(interval);
-    // var tpActive = document.getElementsByClassName("tp-backdrop tp-active")[0];
     fancy.parentNode.removeChild(fancy);
     document.documentElement.classList.remove("fancybox-margin");
     document.documentElement.classList.remove("fancybox-lock");
-    document.documentElement.style.overflow = "auto !important";
-    document.body.style.overflow = "auto !important";
+    document.documentElement.style.overflow = "auto";
+    document.body.style.cssText = "overflow:auto !important";
+    window.scrollTo(0, 0);
+    if (times < 1) {
+      times++;
+      var interval = setInterval(function () {
+        timesRun += 1;
+        if (timesRun === 8) {
+          clearInterval(interval);
+        } else {
+          fancyOverlay(times);
+        }
+      }, 2000);
+    }
+  }
+}
+
+function fcABC() {
+  var fc = document.getElementsByClassName("fc-ab-root")[0];
+  if (fc) {
+    clearInterval(interval);
+    fc.parentNode.removeChild(fc);
+    document.body.style.overflow = "";
     window.scrollTo(0, 0);
   }
 }
