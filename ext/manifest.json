@@ -23,7 +23,8 @@
         "https://medium.com/*",
         "https://www.cnbc.com/*",
         "https://www.bloomberg.com/*",
-        "https://www.telegraph.co.uk/*"
+        "https://www.telegraph.co.uk/*",
+        "https://www.sfchronicle.com/*"
       ],
       "js": ["content.js"]
     }

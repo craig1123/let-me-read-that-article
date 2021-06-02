@@ -6,6 +6,7 @@ var domains = {
   "www.medium.com": "clearCookies",
   "www.cnbc.com": "pico",
   "www.bloomberg.com": "clearLocalStorage",
+  "www.sfchronicle.com": "fancyOverlay",
 };
 
 var domainMessage = domains[document.location.host];
@@ -28,6 +29,8 @@ function checkPopup() {
     document.activeElement === document.body
   ) {
     tpModal();
+  } else if (domainMessage === "fancyOverlay") {
+    fancyOverlay();
   } else if (domainMessage === "clearCookies") {
     clearCookies();
   } else if (domainMessage === "pico") {
@@ -45,6 +48,20 @@ function tpModal() {
     tpModalEl.parentNode.removeChild(tpModalEl);
     tpActive.parentNode.removeChild(tpActive);
     document.body.classList.remove("tp-modal-open");
+    window.scrollTo(0, 0);
+  }
+}
+
+function fancyOverlay() {
+  var fancy = document.getElementsByClassName("fancybox-overlay ")[0];
+  if (fancy) {
+    clearInterval(interval);
+    // var tpActive = document.getElementsByClassName("tp-backdrop tp-active")[0];
+    fancy.parentNode.removeChild(fancy);
+    document.documentElement.classList.remove("fancybox-margin");
+    document.documentElement.classList.remove("fancybox-lock");
+    document.documentElement.style.overflow = "auto !important";
+    document.body.style.overflow = "auto !important";
     window.scrollTo(0, 0);
   }
 }
