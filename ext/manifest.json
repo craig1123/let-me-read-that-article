@@ -25,7 +25,8 @@
         "https://www.bloomberg.com/*",
         "https://www.telegraph.co.uk/*",
         "https://www.sfchronicle.com/*",
-        "https://heraldcourier.com/*"
+        "https://heraldcourier.com/*",
+        "https://www.orlandosentinel.com/*"
       ],
       "js": ["content.js"]
     }

@@ -8,6 +8,7 @@ var domains = {
   "www.bloomberg.com": "clearLocalStorage",
   "www.sfchronicle.com": "fancyOverlay",
   "heraldcourier.com": "fc-abc",
+  "www.orlandosentinel.com": "zephr",
 };
 
 var domainMessage = domains[document.location.host];
@@ -38,6 +39,8 @@ function checkPopup() {
     clearCookies();
   } else if (domainMessage === "pico") {
     pico();
+  } else if (domainMessage === "zephr") {
+    zephr();
   } else if (domainMessage === "clearLocalStorage") {
     clearLocalStorage();
   }
@@ -97,6 +100,17 @@ function pico() {
     var picoOverlay = document.getElementsByClassName("pico-overlay")[0];
     picoOverlay.parentNode.removeChild(picoOverlay);
     picoContent.parentNode.removeChild(picoContent);
+    window.scrollTo(0, 0);
+  }
+}
+
+function zephr() {
+  var zephrOverlay = document.getElementById("zephr-overlay");
+  if (zephrOverlay) {
+    clearInterval(interval);
+    zephrOverlay.parentNode.removeChild(zephrOverlay);
+    document.documentElement.style.overflow = "auto";
+    document.body.style.overflow = "auto";
     window.scrollTo(0, 0);
   }
 }
