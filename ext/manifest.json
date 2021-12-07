@@ -4,7 +4,7 @@
   "name": "Let Me Read That Article",
   "short_name": "LMRTA",
   "description": "Read that article you've always wanted",
-  "version": "1.6",
+  "version": "1.7",
   "background": {
     "scripts": ["background.js"]
   },

@@ -1,6 +1,6 @@
 {
   "name": "let-me-read-that-article",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Read that article you've always wanted",
   "main": "gulpfile.babel.js",
   "scripts": {
